@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Zajęć - Strona Główna</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body style="font-family: 'Roboto', sans-serif;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Plan Zajęć</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.schedule_page') }}">Plan Zajęć</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.groups_page') }}">Grupy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main.buildings_page') }}">Budynki</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger text-white" href="{{ url_for('main.logout') }}">Wyloguj</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Witamy w Systemie Planów Zajęć</h1>
+            <p class="lead">Zarządzaj planem zajęć, grupami i budynkami w prosty sposób</p>
+            <a href="{{ url_for('main.schedule_page') }}" class="btn btn-light btn-lg mt-3">Zobacz Plan Zajęć</a>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-calendar3 display-4 text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Plan Zajęć</h5>
+                        <p class="card-text">Zarządzaj planami zajęć i dodawaj nowe przedmioty.</p>
+                        <a href="{{ url_for('main.schedule_page') }}" class="btn btn-primary">Zarządzaj</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-people-fill display-4 text-success"></i>
+                        </div>
+                        <h5 class="card-title">Grupy</h5>
+                        <p class="card-text">Przeglądaj i edytuj listę grup studentów.</p>
+                        <a href="{{ url_for('main.groups_page') }}" class="btn btn-success">Zarządzaj</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow border-0">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <i class="bi bi-building display-4 text-info"></i>
+                        </div>
+                        <h5 class="card-title">Budynki</h5>
+                        <p class="card-text">Dodawaj i edytuj budynki oraz sale wykładowe.</p>
+                        <a href="{{ url_for('main.buildings_page') }}" class="btn btn-info text-white">Zarządzaj</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Plan Zajęć. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

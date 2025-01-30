@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Logowanie</h1>
+    <form action="{{ url_for('main.login') }}" method="POST">
+        <label for="username">Nazwa użytkownika:</label>
+        <input type="text" id="username" name="username" placeholder="Wpisz nazwę użytkownika" required>
+
+        <label for="password">Hasło:</label>
+        <input type="password" id="password" name="password" placeholder="Wpisz hasło" required>
+
+        <button type="submit">
+            <i class="fas fa-sign-in-alt"></i> Zaloguj się
+        </button>
+    </form>
+</body>
+</html>

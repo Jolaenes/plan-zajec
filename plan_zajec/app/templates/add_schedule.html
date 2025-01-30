@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj Zajęcia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Dodaj Zajęcia</h1>
+    <form action="{{ url_for('main.add_schedule') }}" method="POST">
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <label for="subject">Przedmiot:</label>
+        <input type="text" id="subject" name="subject" placeholder="Np. Matematyka" required>
+
+        <label for="time">Godzina:</label>
+        <input type="text" id="time" name="time" placeholder="Np. 10:00 - 11:30" required>
+
+        <label for="room">Sala:</label>
+        <input type="text" id="room" name="room" placeholder="Np. 202/6" required>
+
+        <label for="group">Grupa:</label>
+        <input type="text" id="group" name="group" placeholder="Np. 1A" required>
+
+        <label for="instructor">Prowadzący:</label>
+        <input type="text" id="instructor" name="instructor" placeholder="Np. Jan Kowalski" required>
+
+        <button type="submit">
+            <i class="fas fa-plus-circle"></i> Dodaj Zajęcia
+        </button>
+    </form>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="{{ url_for('main.schedule_page') }}">
+            <i class="fas fa-arrow-left"></i> Wróć do planu zajęć
+        </a>
+    </div>
+</body>
+</html>

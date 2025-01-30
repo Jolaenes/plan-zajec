@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edytuj Budynek</title>
+</head>
+<body>
+    <h1>Edytuj Budynek</h1>
+    <form action="/buildings/edit/{{ building.id }}" method="POST">
+        <label for="name">Nazwa Budynku:</label>
+        <input type="text" id="name" name="name" value="{{ building.name }}" required>
+        <button type="submit" class="btn btn-primary">Zapisz</button>
+    </form>
+</body>
+</html>

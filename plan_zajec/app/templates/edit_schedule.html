@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edytuj Zajęcia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Edytuj Zajęcia</h1>
+        <form method="POST" action="{{ url_for('main.edit_schedule', index=index) }}">
+            <label for="subject">Przedmiot:</label>
+            <input type="text" id="subject" name="subject" value="{{ schedule.subject }}" required>
+
+            <label for="time">Czas:</label>
+            <input type="text" id="time" name="time" value="{{ schedule.time }}" required>
+
+            <label for="room">Sala:</label>
+            <input type="text" id="room" name="room" value="{{ schedule.room }}" required>
+
+            <label for="group">Grupa:</label>
+            <input type="text" id="group" name="group" value="{{ schedule.group }}" required>
+
+            <label for="instructor">Prowadzący:</label>
+            <input type="text" id="instructor" name="instructor" value="{{ schedule.instructor }}" required>
+
+            <button type="submit">Zapisz zmiany</button>
+        </form>
+        <a href="{{ url_for('main.schedule_page') }}">Powrót do listy zajęć</a>
+    </div>
+</body>
+</html>
+

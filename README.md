@@ -43,7 +43,7 @@ Lokalne uruchomienie projektu
 3. Instalacja zależności
 	- pip install -r requirements.txt
 4. Uruchomienie aplikacji
-	- flask run
+	- flask --app plan_zajec.app run
 5. Opcjonalne uruchomienie w Dockerze
 	- docker build -t plan-zajec .
 	- docker run -p 5000:5000 plan-zajec

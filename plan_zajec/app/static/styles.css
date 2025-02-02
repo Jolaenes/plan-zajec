@@ -1,9 +1,21 @@
+/* Resetowanie marginesów i paddingów dla wszystkich elementów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Zapewnia, że paddingi i marginesy nie wpływają na szerokość elementu */
+}
+
 /* Styl dla całego ciała strony */
 body {
     background-color: #9bc3ec; /* Błękitne tło */
     font-family: Arial, sans-serif; /* Styl czcionki */
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Wyrównanie do góry */
+    align-items: center;
+    min-height: 100vh; /* Pełna wysokość */
 }
 
 /* Styl dla nagłówków */
@@ -46,22 +58,21 @@ button {
 button:hover {
     background-color: #c198da; /* Fioletowy kolor po najechaniu myszą */
 }
-/* Resetowanie stylów */
-body, h1, label, p {
+
+/* Styl dla header i footer */
+header, footer {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
 }
 
+/* Login box */
 .login-box {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -117,12 +128,6 @@ body {
     margin-top: 10px;
 }
 
-footer {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 12px;
-    color: #666;
-}
 /* Stylizacja ogólna */
 body {
     background-color: #f0f8ff;
@@ -218,6 +223,7 @@ a:hover {
 button {
     margin: 5px;
 }
+
 /* Dodaj odstępy między polami formularza */
 form label {
     margin-top: 10px;
@@ -238,18 +244,12 @@ a {
 a:hover {
     text-decoration: underline;
 }
-body {
-    font-family: Arial, sans-serif;
-}
 
+/* Dodatkowe efekty na kartach */
 .card {
     transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: scale(1.05);
-}
-
-footer {
-    font-size: 14px;
 }

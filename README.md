@@ -10,8 +10,8 @@
 - Dodawanie zajęć
 - Edytowanie istniejących zajęć
 - Usuwanie zajęć
-- Dodawanie i edytowanie budynków oraz sal
-- Edycja i dodawanie nowych grup
+- Dodawanie i usuwanie budynków
+- Usuwanie dodawanie nowych grup
 
 ## Zależności:
 - Flask

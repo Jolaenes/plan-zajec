@@ -1,0 +1,255 @@
+/* Styl dla całego ciała strony */
+body {
+    background-color: #9bc3ec; /* Błękitne tło */
+    font-family: Arial, sans-serif; /* Styl czcionki */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styl dla nagłówków */
+h1 {
+    color: #fd9fd5; /* Różowy kolor tekstu */
+    text-align: center; /* Wyśrodkowanie nagłówków */
+    margin-top: 20px;
+}
+
+/* Stylizacja tabel */
+table {
+    margin-top: 20px; /* Odstęp od góry */
+    border-collapse: collapse; /* Usuń odstępy między komórkami */
+    width: 100%; /* Tabela na pełną szerokość */
+    background-color: #ffffff; /* Białe tło */
+}
+
+th, td {
+    padding: 15px; /* Wewnętrzne marginesy */
+    text-align: left; /* Wyrównanie do lewej */
+    border: 1px solid #6c96bc; /* Obramowanie komórek */
+}
+
+th {
+    background-color: #c198da; /* Jasnofioletowe tło nagłówka */
+    color: #ffffff; /* Biały kolor tekstu nagłówka */
+}
+
+/* Styl dla przycisków */
+button {
+    margin: 5px; /* Odstęp wokół przycisków */
+    padding: 10px 15px; /* Wewnętrzne marginesy */
+    background-color: #fd9fd5; /* Różowe tło */
+    color: white; /* Biały tekst */
+    border: none; /* Brak obramowania */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+}
+
+button:hover {
+    background-color: #c198da; /* Fioletowy kolor po najechaniu myszą */
+}
+/* Resetowanie stylów */
+body, h1, label, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.login-box h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.login-box label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+/* Stylizacja ogólna */
+body {
+    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Nagłówek */
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+/* Formularze */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Tabele */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4a90e2;
+    color: white;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Linki */
+a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Przyciski */
+button {
+    margin: 5px;
+}
+/* Dodaj odstępy między polami formularza */
+form label {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+form input {
+    height: 40px;
+}
+
+/* Dodatkowe style dla linku powrotu */
+a {
+    font-size: 1rem;
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    font-size: 14px;
+}

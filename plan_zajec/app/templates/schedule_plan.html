@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan Zajęć</title>
+</head>
+<body>
+    <h1>Plan Zajęć</h1>
+    {% for day, schedules in schedule_data.items() %}
+        <h2>{{ day }}</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Przedmiot</th>
+                    <th>Godzina</th>
+                    <th>Sala</th>
+                    <th>Grupa</th>
+                    <th>Prowadzący</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for schedule in schedules %}
+                    <tr>
+                        <td>{{ schedule.subject }}</td>
+                        <td>{{ schedule.time }}</td>
+                        <td>{{ schedule.room }}</td>
+                        <td>{{ schedule.group }}</td>
+                        <td>{{ schedule.instructor }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endfor %}
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lista Planów Zajęć</title>
+</head>
+<body>
+    <h1>Lista Planów Zajęć</h1>
+    <ul>
+        {% for schedule in schedules %}
+            <li>
+                <a href="/schedule-detail/{{ schedule.id }}">{{ schedule.subject }} - {{ schedule.time }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

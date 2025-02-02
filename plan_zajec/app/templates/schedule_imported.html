@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Importowany Plan Zajęć</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Importowany Plan Zajęć</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Dane z PDF</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for line in schedule %}
+            <tr>
+                <td>{{ line }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
